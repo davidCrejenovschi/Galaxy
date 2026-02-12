@@ -16,4 +16,4 @@ This project is based on the "Galaxy" game created by **Jonathan Rue** as part o
 
 As stated by the author in the tutorial, the project is open for modification and personal development. I would also like to extend a special thanks to **freeCodeCamp.org** for their incredible mission to provide free, high-quality coding education to everyone, everywhere.
 
-**Note:** This is a **non-commercial, educational project** created for portfolio and learning purposes.
+**Note:** This is a **non-commercial, educational project** created for learning purposes.
