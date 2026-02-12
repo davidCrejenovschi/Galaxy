@@ -1,0 +1,17 @@
+
+__pycache__/
+*.pyc
+
+/bin
+/build
+/dist
+/.buildozer
+
+*.spec
+
+.idea/
+.vscode/
+
+*.log
+
+venv/
