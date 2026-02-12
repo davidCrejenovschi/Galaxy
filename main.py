@@ -1,3 +1,9 @@
+import os, sys
+from kivy.resources import resource_add_path
+
+if hasattr(sys, '_MEIPASS'):
+    resource_add_path(os.path.join(sys._MEIPASS))
+
 from kivy.config import Config
 from kivy.core.audio import SoundLoader
 
