@@ -11,7 +11,7 @@
 
 ---
 
-> 📁 **[Access the Technical Documentation PDF here](docs/Documentatie_Tehnica_Galaxy.pdf)**
+> 📁 **[Access the Technical Documentation PDF here](docs/BuildingGalaxy.pdf)**
 
 ---
 
