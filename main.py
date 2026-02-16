@@ -7,8 +7,8 @@ if hasattr(sys, '_MEIPASS'):
 from kivy.config import Config
 from kivy.core.audio import SoundLoader
 
-Config.set('graphics', 'width', '900')
-Config.set('graphics', 'height', '400')
+Config.set('graphics', 'resizable', '1') 
+Config.set('graphics', 'fullscreen', 'auto')
 from kivy.lang import Builder
 Builder.load_file("menu.kv")
 from kivy.app import App
@@ -72,7 +72,6 @@ class MainWidget(RelativeLayout):
     sound_music1 = None
     sound_restart = None
 
-    #
     def __init__(self, **kwargs):
         super(MainWidget, self).__init__(**kwargs)
 
@@ -102,7 +101,6 @@ class MainWidget(RelativeLayout):
         Clock.schedule_interval(self.update, 1/60.0 )
         self.sound_galaxy.play()
 
-    #
     def reset_game(self):
 
         self.current_offset_y = 0
@@ -115,14 +113,12 @@ class MainWidget(RelativeLayout):
         self.generate_titles_coordinates()
         self.state_game_over = False
 
-    #
     @staticmethod
     def is_desktop():
         if platform in ('linux', 'win', "macosx"):
             return True
         return False
 
-    #
     def init_audio(self):
 
         self.sound_begin = SoundLoader.load("audio/begin.wav")
@@ -139,19 +135,16 @@ class MainWidget(RelativeLayout):
         self.sound_restart.volume = .25
         self.sound_begin.volume = .25
 
-    #
     def init_tiles(self):
         with self.canvas:
             Color(1, 1, 1)
             for i in range(0, self.NB_TILES):
                 self.tiles.append(Quad())
 
-    #
     def pre_fill_tiles_coordinates(self):
         for i in range(0, 10):
             self.tiles_coordinates.append((0, i))
 
-    #
     def generate_titles_coordinates(self):
 
         last_x = 0
@@ -187,7 +180,6 @@ class MainWidget(RelativeLayout):
                 self.tiles_coordinates.append((last_x, last_y))
             last_y +=1
 
-    #
     def update(self, dt):
 
         time_factor = dt*60
@@ -217,27 +209,23 @@ class MainWidget(RelativeLayout):
             Clock.schedule_once(self.play_game_over_sound, 1)
             self.menu_widget.opacity = 1
 
-    #
     def init_vertical_lines(self):
         with self.canvas:
             Color(1, 1, 1)
             for i in range(self.V_NB_LINES):
                 self.vertical_lines.append(Line())
 
-    #
     def init_horizontal_lines(self):
         with self.canvas:
             Color(1, 1, 1)
             for i in range(self.H_NB_LINES):
                 self.horizontal_lines.append(Line())
 
-    #
     def init_ship(self):
         with self.canvas:
             Color(0, 0, 0)
             self.ship = Triangle()
 
-    #
     def check_ship_collision_with_tile(self, ti_x, ti_y):
         x_min, y_min = self.get_tile_coordinates(ti_x, ti_y)
         x_max, y_max = self.get_tile_coordinates(ti_x+1, ti_y+1)
@@ -247,7 +235,6 @@ class MainWidget(RelativeLayout):
                 return True
         return False
 
-    #
     def check_ship_collision(self):
         for i in range(0, len(self.tiles_coordinates)):
             ti_x, ti_y = self.tiles_coordinates[i]
@@ -257,7 +244,6 @@ class MainWidget(RelativeLayout):
                 return True
         return False
 
-    #
     def update_ship(self):
 
         center_x = self.width / 2
@@ -275,7 +261,6 @@ class MainWidget(RelativeLayout):
 
         self.ship.points = [x1, y1, x2, y2, x3, y3]
 
-    #
     def update_vertical_lines(self):
 
         start_index = -int(self.V_NB_LINES/2)+1
@@ -285,7 +270,6 @@ class MainWidget(RelativeLayout):
             x2, y2 = self.transform(line_x, self.height)
             self.vertical_lines[i].points = [x1, y1, x2, y2]
 
-    #
     def update_horizontal_lines(self):
 
         start_index = -int(self.V_NB_LINES/2)+1
@@ -301,7 +285,6 @@ class MainWidget(RelativeLayout):
             x2, y2 = self.transform(xmax, line_y)
             self.horizontal_lines[i].points = [x1, y1, x2, y2]
 
-    #
     def update_tile(self):
         for i in range(0, self.NB_TILES):
             tile = self.tiles[i]
@@ -314,7 +297,6 @@ class MainWidget(RelativeLayout):
             x4, y4 = self.transform(x_max, y_min)
             tile.points = [x1, y1, x2, y2, x3, y3, x4, y4]
 
-    #
     def get_line_x_from_index(self, index):
         center_line_x = self.perspective_ponit_x
         spacing = self.V_LINES_SPACING * self.width
@@ -322,14 +304,12 @@ class MainWidget(RelativeLayout):
         line_x = center_line_x + (offset * spacing) + self.current_offset_x
         return line_x
 
-    #
     def get_line_y_from_index(self, index):
 
         spacing_y = self.H_LINES_SPACING * self.height
         line_y = index *spacing_y - self.current_offset_y
         return line_y
 
-    #
     def get_tile_coordinates(self, ti_x, ti_y):
 
         ti_y = ti_y - self.current_y_loop
@@ -337,12 +317,10 @@ class MainWidget(RelativeLayout):
         y = self.get_line_y_from_index(ti_y)
         return x, y
 
-    #
     def play_game_over_sound(self, dt):
         if self.state_game_over:
             self.sound_gameover_voice.play()
 
-    #
     def on_menu_button_press(self):
         if self.state_game_over:
             self.sound_restart.play()
