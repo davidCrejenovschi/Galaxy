@@ -9,7 +9,6 @@
 - **macOS:** `.dmg`
 
 **Galaxy** is a space runner arcade game developed in Python using the Kivy framework. It features dynamic 3D perspective movement and procedural path generation.
-<img width="1113" height="539" alt="Captură de ecran 2026-03-19 213745" src="https://github.com/user-attachments/assets/4c5cf02b-ea63-4ca6-ab12-8580d844ff30" />
 ---
 
 > 📁 **[Access the Technical Documentation PDF here](docs/BuildingGalaxy.pdf)**
