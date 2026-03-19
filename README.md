@@ -39,7 +39,7 @@ Follow these steps to configure the source code on your machine.
 Open your terminal and run:
 
 ```bash
-git clone [https://github.com/davidCrejenovschi/Galaxy.git](https://github.com/davidCrejenovschi/Galaxy.git)
+git clone https://github.com/davidCrejenovschi/Galaxy.git
 ```
 
 ```bash
