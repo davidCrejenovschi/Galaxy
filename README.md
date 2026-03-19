@@ -1,6 +1,17 @@
 # 🌌 Galaxy
 ![Galaxy 2026-03-19 21-29-49](https://github.com/user-attachments/assets/80d41731-a655-4dd0-abf8-ace564a3c500)
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/80d41731-a655-4dd0-abf8-ace564a3c500" alt="Galaxy Preview">
+  <br>
+  <em>GIF created using [VEED.io](https://www.veed.io/).</em>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.13-blue?logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/Framework-Kivy-green?logo=kivy" alt="Kivy">
+</p>
+
 ![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
 ![Kivy](https://img.shields.io/badge/Framework-Kivy-green?logo=kivy)
 
