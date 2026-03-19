@@ -49,15 +49,23 @@ cd Galaxy
 ### 2. Create and Activate a Virtual Environment
 
 **Windows:**
+
 ```bash
 python -m venv venv
+```
+
+```bash
 venv\Scripts\activate
 ```
 
 **macOS / Linux:**
+
 ```bash
 python3 -m venv venv
-source venv/bin/activate
+```
+
+```bash
+python3 -m venv venv
 ```
 
 ### 3. Install Dependencies
