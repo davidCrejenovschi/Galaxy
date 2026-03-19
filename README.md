@@ -31,33 +31,43 @@ _GIF created using [VEED.io](https://www.veed.io/)._
 
 **Note:** This is a **non-commercial, educational project** created for learning purposes.
 
-## 🚀 Getting Started
+## 🛠️ Local Development Setup
 
-Follow these steps to set up the project locally.
+Follow these steps to configure the source code on your machine.
 
 ### 1. Clone the Repository
 Open your terminal and run:
-git clone https://github.com/davidCrejenovschi/Galaxy.git
+
+```bash
+git clone [https://github.com/davidCrejenovschi/Galaxy.git](https://github.com/davidCrejenovschi/Galaxy.git)
+```
+
+```bash
 cd Galaxy
+```
 
 ### 2. Create and Activate a Virtual Environment
 
 **Windows:**
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
 **macOS / Linux:**
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
 ### 3. Install Dependencies
-Once the environment is activated, install the required packages:
+
+```bash
 pip install -r requirements.txt
+```
 
 ### 4. Run the Project
-Start the application by running:
+
+```bash
 python main.py
-
-
-
-
+```
