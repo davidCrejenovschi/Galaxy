@@ -36,7 +36,6 @@ _GIF created using [VEED.io](https://www.veed.io/)._
 Follow these steps to configure the source code on your machine.
 
 ### 1. Clone the Repository
-Open your terminal and run:
 
 ```bash
 git clone https://github.com/davidCrejenovschi/Galaxy.git
